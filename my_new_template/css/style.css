@@ -1,0 +1,256 @@
+/* Start Varibals */
+:root {
+  --green-color: #138754;
+  --yello-color: #e9c004;
+  --main-color: #f55300;
+  --gray-color: gray;
+  --light-color: #f0f0f0;
+  --secound-color: #c37575;
+  --title-font-famliy: "Amatic SC", cursive;
+  --body-font-family: "Source Sans 3", sans-serif;
+}
+/* End Varibals */
+body {
+  font-family: var(--body-font-family);
+  margin: 0 !important;
+  height: 5000px;
+}
+::selection {
+  background-color: var(--yello-color);
+  color: var(--light-color);
+}
+h1 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+h2 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+h3 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+h4 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+h5 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+h6 {
+  font-family: var(--title-font-famliy);
+  margin: 0 !important;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none !important;
+}
+/* start Info */
+.info{
+  text-align: center;
+  margin-top: 20px;
+}
+.info h1 {
+  color: var(--yello-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.info svg {
+  color: var(--main-color);
+  font-size: 20px;
+}
+/* end info */
+/* Start Header */
+nav {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  margin-bottom: 60px;
+  z-index: 1000;
+}
+@media (max-width: 991px) {
+  .container > svg {
+    display: block !important;
+    overflow: hidden !important;
+    cursor: pointer;
+  }
+  nav .logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+nav .logo a {
+  color: var(--main-color);
+}
+@media (max-width: 991px) {
+  nav .links {
+    position: absolute !important;
+    display: none !important;
+    top: 40px;
+    width: 100%;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  nav .links:hover {
+    display: block !important;
+  }
+  nav .links li {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+nav .links a {
+  color: var(--gray-color);
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+nav .links a.active {
+  color: var(--secound-color);
+}
+nav .links a:hover {
+  color: var(--secound-color);
+}
+
+.container > svg:hover ~ .links {
+  display: block !important;
+}
+/* end header */
+/* start Landing */
+section.container{
+  margin-top: 60px;
+}
+.landing{
+  background-image: url(../images/landing.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.landing h1 {
+  color: var(--secound-color);
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+
+
+}
+.landing span {
+  font-size: 45px;
+  color: var(--light-color);
+  display: inline-block;
+  margin-bottom: 20px;
+
+}
+.landing p{
+  margin:0 30px 20px;
+  position: relative;
+
+}
+.landing p::before {
+  position: absolute;
+  content: "v";
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  background-color: var(--green-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing a{
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--secound-color);
+  padding: 10px 20px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  font-family: var(--title-font-famliy);
+  font-size: 25px;
+  font-weight: normal;
+}
+@media(max-width:557px){
+  .landing a{
+    margin: 0 auto;
+  }
+}
+.landing a:hover{
+  background-color: var(--yello-color);
+}
+.landing a:hover::before{
+  top: -20px;
+}
+.landing a::before{
+  content: "";
+  position: absolute;
+  background-color: var(--green-color);
+  width: 20px;
+  height: 40px;
+  right: -2px;
+  top: -40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.landing .time{
+  background-color: white;
+  height: fit-content;
+  width: 200px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.landing .time h4{
+  padding: 10px 0;
+}
+.landing .time h4:first-child{
+  color: var(--light-color);
+  background-color: var(--main-color);
+  font-weight: bold;
+}
+.landing .time h4:last-child{
+  font-family: var(--body-font-family);
+  font-weight: normal;
+  font-size: 19px;
+}
+/* End Landing */
+/* start Our story */
+.story{
+  margin: 50px 0;
+}
+
+
+
+
+.story img{
+  width: 50%;
+}
+/* End Our story */
